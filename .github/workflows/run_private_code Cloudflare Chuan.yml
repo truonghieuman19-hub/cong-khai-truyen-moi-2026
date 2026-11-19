@@ -24,7 +24,7 @@ jobs:
       YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
 
       # chọn thumb tiêu đề bắt đầu
-      SEQ_BASE_RUN: "68"
+      SEQ_BASE_RUN: "1"
       TITLE_START: "1"
       THUMB_START: "1"
 
@@ -65,7 +65,7 @@ jobs:
 
 
       SUB_MODE: "first"
-      SUB_DURATION_SEC: "10000"
+      SUB_DURATION_SEC: "7000"
 
     steps:
       - name: Checkout wrapper (repo PUBLIC)
@@ -92,7 +92,7 @@ jobs:
       - name: Resolve parameters (support schedule without inputs)
         id: params
         run: |
-          repo="${{ inputs.private_repo }}"; [ -z "$repo" ] && repo="tramhoatruong-spec/Moi-2026-rieng-tu"; echo "repo=$repo" >> "$GITHUB_OUTPUT"
+          repo="${{ inputs.private_repo }}"; [ -z "$repo" ] && repo="truonghieuman19-hub/truyen-moi-2026"; echo "repo=$repo" >> "$GITHUB_OUTPUT"
           ref="${{ inputs.private_ref }}";   [ -z "$ref" ] && ref="main";                   echo "ref=$ref" >> "$GITHUB_OUTPUT"
           wd="${{ inputs.workdir }}";        [ -z "$wd" ]  && wd=".";                       echo "workdir=$wd" >> "$GITHUB_OUTPUT"
           privacy="${{ inputs.youtube_privacy }}"; [ -z "$privacy" ] && privacy="public";   echo "privacy=$privacy" >> "$GITHUB_OUTPUT"

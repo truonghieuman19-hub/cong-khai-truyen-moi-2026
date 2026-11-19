@@ -1,8 +1,8 @@
 name: run-private-code
 
 on:
+
   
-    
   workflow_dispatch: {}
   
 env:
@@ -24,7 +24,7 @@ jobs:
       YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
 
       # chọn thumb tiêu đề bắt đầu
-      SEQ_BASE_RUN: "2"
+      SEQ_BASE_RUN: "3"
       TITLE_START: "1"
       THUMB_START: "1"
 
@@ -65,7 +65,7 @@ jobs:
 
 
       SUB_MODE: "first"
-      SUB_DURATION_SEC: "7000"
+      SUB_DURATION_SEC: "5000"
 
     steps:
       - name: Checkout wrapper (repo PUBLIC)
